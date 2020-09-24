@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="810" />
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$USER_HOME$/Desktop/Phenix_Challenge" value="PREVIEW" />
+        <entry key="$USER_HOME$/Desktop/Phenix_Challenge1" value="PREVIEW" />
+        <entry key="$USER_HOME$/Desktop/Phenix_Challenge3" value="PREVIEW" />
+        <entry key="$USER_HOME$/Desktop/Phenix_ChallengeX" value="PREVIEW" />
+        <entry key="$USER_HOME$/Desktop/kafkarawdataspark" value="PREVIEW" />
+        <entry key="$USER_HOME$/Desktop/testHbase" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../Phenix_ChallengeX" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
