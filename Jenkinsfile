@@ -17,7 +17,7 @@ pipeline {
     stage('Build') {
         when {
           expression{
-             $BRANCH_NAME == 'learning_J' && CODE_CHANGES = true 
+             $BRANCH_NAME == 'learning_J' && CODE_CHANGES == true 
           }  
         }
         steps {
