@@ -16,10 +16,11 @@ pipeline {
         steps {
             git url: 'https://github.com/skalli3/MyJenkinsLearningRepo.git'
             sh 'git checkout master'
+          echo '${DISABLE_AUTH}'
         }
     }
     stage('Build') {
-       //echo 'its OKKKKKKKKKKKKKKK'
+       
         when {
           expression{
              env.BRANCH_NAME == 'master' || DISABLE_AUTH == true 
