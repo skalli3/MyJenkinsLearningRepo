@@ -23,7 +23,7 @@ pipeline {
             sh 'git checkout learning_J'
             echo "the Database Engine is: ${DB_ENGINE}"
             echo "the deactivation of authentication is: ${env.GIT_BRANCH}"
-            echo "to deploy or not: ${param.TO_DEPLOY}"
+            echo "to deploy or not: ${params.TO_DEPLOY}"
         }
     }
     stage('Build') {
