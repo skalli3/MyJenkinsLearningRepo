@@ -1,3 +1,4 @@
+CODE_CHANGES = getGitChanges
 pipeline {
   agent any
   tools { 
@@ -16,7 +17,7 @@ pipeline {
     stage('Build') {
         when {
           expression{
-             BRANCH_NAME == 'learning_J' ||  BRANCH_NAME == 'learning_K' 
+             $BRANCH_NAME == 'learning_J' && CODE_CHANGES = true 
           }  
         }
         steps {
@@ -29,7 +30,7 @@ pipeline {
     stage('deploy') {
         when {
           expression{
-             BRANCH_NAME == 'learning_J' ||  BRANCH_NAME == 'learning_K' 
+             $BRANCH_NAME == 'learning_J' ||  $BRANCH_NAME == 'learning_K' 
           }  
         }
         steps {
