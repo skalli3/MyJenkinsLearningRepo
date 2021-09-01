@@ -16,7 +16,7 @@ pipeline {
     stage('Build') {
         when {
           expression{
-             BRANCH_NAME = 'learning_J' ||  BRANCH_NAME = 'learning_K' 
+             BRANCH_NAME == 'learning_J' ||  BRANCH_NAME == 'learning_K' 
           }  
         }
         steps {
@@ -29,7 +29,7 @@ pipeline {
     stage('deploy') {
         when {
           expression{
-             BRANCH_NAME = 'learning_J' ||  BRANCH_NAME = 'learning_K' 
+             BRANCH_NAME == 'learning_J' ||  BRANCH_NAME == 'learning_K' 
           }  
         }
         steps {
