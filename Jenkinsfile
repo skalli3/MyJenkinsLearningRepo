@@ -28,7 +28,8 @@ pipeline {
             git url: 'https://github.com/skalli3/MyJenkinsLearningRepo.git'
             withMaven {
                     sh "mvn clean verify"
-            } 
+            }
+            echo 'its OKKKKKKKKKKKKKKK'
         }
     }
     stage('deploy') {
