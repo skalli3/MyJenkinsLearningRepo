@@ -37,7 +37,7 @@ pipeline {
     success{
           echo 'Build was succeeded'  
     }
-    error{
+    aborted{
           echo 'Build was exited with error'  
     }
   }  
