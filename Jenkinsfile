@@ -14,7 +14,7 @@ pipeline {
   stages {
     stage('pre-Build') {
         steps {
-            git url: 'https://github.com/skalli3/MyJenkinsLearningRepo.git' branch 'learning_J'
+            git url: 'https://github.com/skalli3/MyJenkinsLearningRepo.git'
             sh 'git checkout master'
           echo "the kda is: ${DB_ENGINE}"
           echo "the kda is: ${env.BRANCH_NAME}"
