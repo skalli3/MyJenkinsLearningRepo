@@ -2,7 +2,6 @@ pipeline {
   agent any
   tools { 
       maven 'mvn'
-      jdk '/usr/lib/jvm/java-8-openjdk-amd64/jre' 
     }
   options {
     timestamps()
