@@ -16,7 +16,7 @@ pipeline {
         steps {
             git url: 'https://github.com/skalli3/MyJenkinsLearningRepo.git'
             sh 'git checkout master'
-          echo 'the kda is: ${env.BRANCH_NAME}'
+          echo 'the kda is: $env.BRANCH_NAME'
         }
     }
     stage('Build') {
