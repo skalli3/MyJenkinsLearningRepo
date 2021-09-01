@@ -19,6 +19,7 @@ pipeline {
         }
     }
     stage('Build') {
+       echo 'its OKKKKKKKKKKKKKKK'
         when {
           expression{
              env.BRANCH_NAME == 'master' || DISABLE_AUTH == true 
@@ -29,7 +30,7 @@ pipeline {
             withMaven {
                     sh "mvn clean verify"
             }
-            echo 'its OKKKKKKKKKKKKKKK'
+            
         }
     }
     stage('deploy') {
