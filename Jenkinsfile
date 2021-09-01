@@ -19,7 +19,7 @@ pipeline {
         }
     }
     stage('Build') {
-       echo 'its OKKKKKKKKKKKKKKK'
+       //echo 'its OKKKKKKKKKKKKKKK'
         when {
           expression{
              env.BRANCH_NAME == 'master' || DISABLE_AUTH == true 
