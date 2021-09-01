@@ -10,21 +10,27 @@ pipeline {
   environment {
      DISABLE_AUTH = true
      DB_ENGINE    = 'sqlite'
+     VERSION      = '1.3.0'
   }
+  parameters{
+     string(name: 'ENVIRONMENT', defaultValue: 'UAT', description: 'Target Environment')
+     choice(name: 'VERSION', choices:['1.1.0','1.2.0','1.3.0'], description: '')
+     booleanParam(name: 'TO_DEPLOY', defaultValue: true, description: 'if to deploy')
+  }  
   stages {
     stage('pre-Build') {
         steps {
             git url: 'https://github.com/skalli3/MyJenkinsLearningRepo.git'
             sh 'git checkout learning_J'
-          echo "the kda is: ${DB_ENGINE}"
-          echo "the kda is: ${env.GIT_BRANCH}"
+            echo "the Database Engine is: ${DB_ENGINE}"
+            echo "the deactivation of authentication is: ${env.GIT_BRANCH}"
+            echo "to deploy or not: ${TO_DEPLOY}"
         }
     }
     stage('Build') {
-       
         when {
           expression{
-             env.BRANCH_NAME == 'master' || DISABLE_AUTH == true 
+             env.GIT_BRANCH == 'origin/master' 
           }  
         }
         steps {
@@ -36,11 +42,6 @@ pipeline {
         }
     }
     stage('deploy') {
-        when {
-          expression{
-             env.GIT_BRANCH == 'origin/master' 
-          }  
-        }
         steps {
             git url: 'https://github.com/skalli3/MyJenkinsLearningRepo.git'
             withMaven {
