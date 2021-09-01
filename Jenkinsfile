@@ -18,9 +18,6 @@ pipeline {
             sh 'git checkout learning_J'
           echo "the kda is: ${DB_ENGINE}"
           echo "the kda is: ${env.GIT_BRANCH}"
-          echo "the kda is: ${BRANCH_NAME}"
-          echo "the kda is: $env.BRANCH_NAME"
-          echo "the kda is: $BRANCH_NAME"
         }
     }
     stage('Build') {
@@ -41,7 +38,7 @@ pipeline {
     stage('deploy') {
         when {
           expression{
-             env.BRANCH_NAME == 'learning_J' //||  $BRANCH_NAME == 'learning_K' 
+             env.GIT_BRANCH == 'origin/master' 
           }  
         }
         steps {
