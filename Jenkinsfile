@@ -10,7 +10,7 @@ pipeline {
     stage('pre-Build') {
         steps {
             git url: 'https://github.com/skalli3/MyJenkinsLearningRepo.git'
-            sh 'git checkout learning_J'
+            sh 'git checkout master'
         }
     }
     stage('Build') {
