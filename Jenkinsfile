@@ -14,6 +14,11 @@ pipeline {
         }
     }
     stage('Build') {
+        when {
+          expression{
+             BRANCH_NAME = 'learning_J' ||  BRANCH_NAME = 'learning_K' 
+          }  
+        }
         steps {
             git url: 'https://github.com/skalli3/MyJenkinsLearningRepo.git'
             withMaven {
@@ -22,6 +27,11 @@ pipeline {
         }
     }
     stage('deploy') {
+        when {
+          expression{
+             BRANCH_NAME = 'learning_J' ||  BRANCH_NAME = 'learning_K' 
+          }  
+        }
         steps {
             git url: 'https://github.com/skalli3/MyJenkinsLearningRepo.git'
             withMaven {
