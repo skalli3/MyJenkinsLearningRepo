@@ -7,6 +7,10 @@ pipeline {
   options {
     timestamps()
   }
+  environment {
+     DISABLE_AUTH = true
+     DB_ENGINE    = 'sqlite'
+  }
   stages {
     stage('pre-Build') {
         steps {
@@ -17,7 +21,7 @@ pipeline {
     stage('Build') {
         when {
           expression{
-             env.BRANCH_NAME == 'learning_J'// && CODE_CHANGES == true 
+             env.BRANCH_NAME == 'master' || DISABLE_AUTH == true 
           }  
         }
         steps {
