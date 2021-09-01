@@ -17,7 +17,7 @@ pipeline {
             git url: 'https://github.com/skalli3/MyJenkinsLearningRepo.git'
             sh 'git checkout master'
           echo "the kda is: ${DB_ENGINE}"
-          echo "the kda is: ${env.BRANCH_NAME}"
+          echo "the kda is: ${env.GIT_BRANCH}"
           echo "the kda is: ${BRANCH_NAME}"
           echo "the kda is: $env.BRANCH_NAME"
           echo "the kda is: $BRANCH_NAME"
