@@ -1,7 +1,7 @@
 pipeline {
   agent any
   tools { 
-      maven 'mvnfc' //'/usr/share/maven' 
+      maven 'mvnfclp' //'/usr/share/maven' 
       //jdk //'/usr/lib/jvm/java-8-openjdk-amd64/jre' 
     }
   options {
