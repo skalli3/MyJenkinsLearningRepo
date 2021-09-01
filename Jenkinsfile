@@ -16,7 +16,7 @@ pipeline {
         steps {
             git url: 'https://github.com/skalli3/MyJenkinsLearningRepo.git'
             sh 'git checkout master'
-          echo '${DISABLE_AUTH}'
+          echo 'the kda is: $DISABLE_AUTH'
         }
     }
     stage('Build') {
