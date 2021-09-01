@@ -30,5 +30,15 @@ pipeline {
         }
     }
   }
-    
+  post{
+      always{
+          echo 'The build was finished'
+      }
+    success{
+          echo 'Build was succeeded'  
+    }
+    error{
+          echo 'Build was exited with error'  
+    }
+  }  
 }
