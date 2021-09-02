@@ -47,10 +47,7 @@ pipeline {
           }  
         }
         steps {
-            git url: 'https://github.com/skalli3/MyJenkinsLearningRepo.git'
-            withMaven {
-                    sh "mvn clean verify"
-            } 
+          sh  'ssh abdellatif_skalli@10.128.15.207'
         }
     }
   }
