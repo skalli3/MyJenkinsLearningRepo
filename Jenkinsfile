@@ -47,7 +47,7 @@ pipeline {
           }  
         }
         steps {
-          sh  'ssh abdellatif_skalli@10.128.15.207'
+          sh  'ssh abdellatif_skalli@35.223.223.43'
         }
     }
   }
