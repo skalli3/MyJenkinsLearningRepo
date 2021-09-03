@@ -47,7 +47,7 @@ pipeline {
           }  
         }
         steps {
-          sh  'ssh -tt -i /home/abdellatif_skalli/skalli abdellatif_skalli@34.66.7.160'
+          sh  'ssh -tt bdellatif_skalli@34.66.7.160'
         }
     }
   }
