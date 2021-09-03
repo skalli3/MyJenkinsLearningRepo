@@ -16,7 +16,7 @@ pipeline {
      choice(name: 'VERSION', choices:['1.1.0','1.2.0','1.3.0'], description: 'deployment version choice')
      booleanParam(name: 'TO_DEPLOY', defaultValue: true, description: 'if to deploy')
   }  
-  stages {
+  /*stages {
     stage('pre-Build') {
         steps {
             //git url: 'https://github.com/skalli3/MyJenkinsLearningRepo.git'
@@ -29,17 +29,17 @@ pipeline {
     stage('Build') {
         when {
           expression{
-             //env.GIT_BRANCH == 'origin/er' 
+             env.GIT_BRANCH == 'origin/er' 
           }  
         }
         steps {
-            /*git url: 'https://github.com/skalli3/MyJenkinsLearningRepo.git'
+            git url: 'https://github.com/skalli3/MyJenkinsLearningRepo.git'
             withMaven {
                     sh "mvn clean verify"
-            }*/
+            }
             
         }
-    }
+    }*/
     stage('deploy') {
         when {
           expression{
