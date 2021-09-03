@@ -1,8 +1,8 @@
 pipeline {
   agent any
-  tools { 
+  /*tools { 
       maven 'mvn'
-    }
+    }*/
   options {
     timestamps()
   }
@@ -19,8 +19,8 @@ pipeline {
   stages {
     stage('pre-Build') {
         steps {
-            git url: 'https://github.com/skalli3/MyJenkinsLearningRepo.git'
-            sh 'git checkout learning_J'
+            //git url: 'https://github.com/skalli3/MyJenkinsLearningRepo.git'
+            //sh 'git checkout learning_J'
             echo "the Database Engine is: ${DB_ENGINE}"
             echo "the deactivation of authentication is: ${env.GIT_BRANCH}"
             echo "to deploy or not: ${params.TO_DEPLOY}"
@@ -29,14 +29,14 @@ pipeline {
     stage('Build') {
         when {
           expression{
-             env.GIT_BRANCH == 'origin/er' 
+             //env.GIT_BRANCH == 'origin/er' 
           }  
         }
         steps {
-            git url: 'https://github.com/skalli3/MyJenkinsLearningRepo.git'
+            /*git url: 'https://github.com/skalli3/MyJenkinsLearningRepo.git'
             withMaven {
                     sh "mvn clean verify"
-            }
+            }*/
             
         }
     }
