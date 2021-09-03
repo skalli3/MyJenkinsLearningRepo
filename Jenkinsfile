@@ -29,7 +29,7 @@ pipeline {
     stage('Build') {
         when {
           expression{
-             env.GIT_BRANCH == 'origin/master' 
+             env.GIT_BRANCH == 'origin/er' 
           }  
         }
         steps {
