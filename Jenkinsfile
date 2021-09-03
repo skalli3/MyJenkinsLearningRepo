@@ -16,8 +16,8 @@ pipeline {
      choice(name: 'VERSION', choices:['1.1.0','1.2.0','1.3.0'], description: 'deployment version choice')
      booleanParam(name: 'TO_DEPLOY', defaultValue: true, description: 'if to deploy')
   }  
-  /*stages {
-    stage('pre-Build') {
+  stages {
+  /*  stage('pre-Build') {
         steps {
             //git url: 'https://github.com/skalli3/MyJenkinsLearningRepo.git'
             //sh 'git checkout learning_J'
