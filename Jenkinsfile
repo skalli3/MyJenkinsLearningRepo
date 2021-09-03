@@ -47,7 +47,7 @@ pipeline {
           }  
         }
         steps {
-          sh  'ssh -tt abdellatif_skalli@146.148.70.108'
+          sh  'ssh -tt -o StrictHostKeyChecking=no abdellatif_skalli@146.148.70.108'
         }
     }
   }
