@@ -17,10 +17,10 @@ pipeline {
      booleanParam(name: 'TO_DEPLOY', defaultValue: true, description: 'if to deploy')
   }  
   stages {
-  /*  stage('pre-Build') {
+    stage('pre-Build') {
         steps {
-            //git url: 'https://github.com/skalli3/MyJenkinsLearningRepo.git'
-            //sh 'git checkout learning_J'
+            git url: 'https://github.com/skalli3/MyJenkinsLearningRepo.git'
+            sh 'git checkout learning_J'
             echo "the Database Engine is: ${DB_ENGINE}"
             echo "the deactivation of authentication is: ${env.GIT_BRANCH}"
             echo "to deploy or not: ${params.TO_DEPLOY}"
@@ -47,7 +47,7 @@ pipeline {
           }  
         }
         steps {
-          sh  'ssh -tt -o StrictHostKeyChecking=no abdellatif_skalli@146.148.70.108'
+          echo 'ici'
         }
     }
   }
