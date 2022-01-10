@@ -39,7 +39,7 @@ pipeline {
             }
             
         }
-    }*/
+    }
     stage('deploy') {
         when {
           expression{
