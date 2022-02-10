@@ -37,7 +37,7 @@ pipeline {
             /*withMaven {
                     sh "mvn clean test"
             }*/
-            sh "mvn exec:java -Dexec.mainClass="com.example.Main"
+            sh "mvn exec:java -Dexec.mainClass=\"alv\""
             echo "the Database Engine is walouuuu"
             
         }
