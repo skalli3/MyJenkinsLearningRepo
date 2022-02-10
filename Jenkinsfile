@@ -37,8 +37,8 @@ pipeline {
             /*withMaven {
                     sh "mvn clean test"
             }*/
-            sh "mvn exec:java -Dexec.mainClass=\"alv\""
-            echo "the Database Engine is walouuuu"
+            sh "mvn clean test"
+          
             
         }
     }
@@ -49,7 +49,7 @@ pipeline {
           }  
         }
         steps {
-          echo 'ici'
+          sh "mvn exec:java -Dexec.mainClass=\"alv\""
         }
     }
   }
