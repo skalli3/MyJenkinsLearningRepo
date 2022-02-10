@@ -1,8 +1,8 @@
 pipeline {
   agent any
-  /*tools { 
+  tools { 
       maven 'mvn'
-    }*/
+    }
   options {
     timestamps()
   }
