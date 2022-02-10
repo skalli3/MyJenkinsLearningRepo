@@ -37,7 +37,7 @@ pipeline {
             /*withMaven {
                     sh "mvn clean test"
             }*/
-            sh "mvn -Dsurefire.useFile=false clean test"
+            sh "mvn -Dtest=Jenkins_Learning -Dmaven.surefire.debug clean test"
             echo "the Database Engine is walouuuu"
             
         }
