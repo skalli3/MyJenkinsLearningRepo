@@ -12,9 +12,9 @@ pipeline {
      VERSION      = '1.3.0'
   }
   parameters{
-     string(name: 'ENVIRONMENT', defaultValue: 'UAT', description: 'Target Environment')
-     choice(name: 'VERSION', choices:['1.1.0','1.2.0','1.3.0'], description: 'deployment version choice')
-     booleanParam(name: 'TO_DEPLOY', defaultValue: true, description: 'if to deploy')
+     //string(name: 'ENVIRONMENT', defaultValue: 'UAT', description: 'Target Environment')
+     choice(name: 'DATABASE VERSION', choices:['1.1.0','1.2.0','1.3.0'], description: 'used database version')
+     booleanParam(name: 'APPLICATION_META', defaultValue: true, description: 'Facebook')
   }  
   stages {
     stage('pre-Build') {
@@ -23,7 +23,7 @@ pipeline {
             //sh 'git checkout learning_J'
             echo "the Database Engine is: ${DB_ENGINE}"
             echo "the deactivation of authentication is: ${env.GIT_BRANCH}"
-            echo "to deploy or not: ${params.TO_DEPLOY}"
+            echo "target Meta Application: ${params.APPLICATION_META}"
         }
     }
     stage('Build') {
@@ -37,18 +37,25 @@ pipeline {
             /*withMaven {
                     sh "mvn clean test"
             }*/
-            sh "mvn clean test"
+            sh "mvn clean package"
           
             
         }
     }
+    stage('Test') {
+        steps {
+            sh "mvn clean test"  
+        }
+    }
     stage('deploy') {
-        when {
+        /*when {
           expression{
              params.TO_DEPLOY == true 
           }  
-        }
+        }*/
+
         steps {
+          input(message: 'do you want to deploy to production?', ok: 'Yes')
           sh "mvn exec:java -Dexec.mainClass=\"alv\""
         }
     }
