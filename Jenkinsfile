@@ -37,7 +37,7 @@ pipeline {
             /*withMaven {
                     sh "mvn clean test"
             }*/
-            sh "mvn clean test"
+            sh "mvn -Dsurefire.useFile=false clean test"
             echo "the Database Engine is walouuuu"
             
         }
