@@ -35,7 +35,7 @@ pipeline {
         steps {
             git url: 'https://github.com/skalli3/MyJenkinsLearningRepo.git'
             withMaven {
-                    sh "mvn clean verify"
+                    sh "mvn clean install"
             }
             
         }
