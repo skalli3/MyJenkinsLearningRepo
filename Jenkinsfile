@@ -14,7 +14,8 @@ pipeline {
   parameters{
      //string(name: 'ENVIRONMENT', defaultValue: 'UAT', description: 'Target Environment')
      choice(name: 'DATABASE VERSION', choices:['1.1.0','1.2.0','1.3.0'], description: 'used database version')
-     booleanParam(name: 'APPLICATION_META', defaultValue: true, description: 'Facebook')
+     choice(name: 'META APPLICATION', choices:['FACEBOOK','WHATSAPP','INSTAGRAM'], description: 'used Meta Application')
+     //booleanParam(name: 'APPLICATION_META', defaultValue: true, description: 'Facebook')
   }  
   stages {
     stage('pre-Build') {
