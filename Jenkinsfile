@@ -34,9 +34,10 @@ pipeline {
         }*/
         steps {
             git url: 'https://github.com/skalli3/MyJenkinsLearningRepo.git'
-            withMaven {
+            /*withMaven {
                     sh "mvn clean install"
-            }
+            }*/
+            sh "mvn clean install"
             echo "the Database Engine is walouuuu"
             
         }
