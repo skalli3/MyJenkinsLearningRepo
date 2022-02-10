@@ -12,7 +12,7 @@ public class alvTest {
         System.out.println("|    |Sign In|              |Sign up |                |");
         System.out.println("|    ---------              ----------                |");
         System.out.println("|                                                     |");
-        System.out.println("|_____________________________________________________|);
+        System.out.println("|_____________________________________________________|");
     }
 
 }
