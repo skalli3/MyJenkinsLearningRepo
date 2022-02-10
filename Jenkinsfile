@@ -20,23 +20,24 @@ pipeline {
     stage('pre-Build') {
         steps {
             git url: 'https://github.com/skalli3/MyJenkinsLearningRepo.git'
-            sh 'git checkout learning_J'
+            //sh 'git checkout learning_J'
             echo "the Database Engine is: ${DB_ENGINE}"
             echo "the deactivation of authentication is: ${env.GIT_BRANCH}"
             echo "to deploy or not: ${params.TO_DEPLOY}"
         }
     }
     stage('Build') {
-        when {
+        /*when {
           expression{
              env.GIT_BRANCH == 'origin/er' 
           }  
-        }
+        }*/
         steps {
             git url: 'https://github.com/skalli3/MyJenkinsLearningRepo.git'
             withMaven {
                     sh "mvn clean install"
             }
+            echo "the Database Engine is walouuuu"
             
         }
     }
