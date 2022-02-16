@@ -1,6 +1,6 @@
 public class alv {
    public static void main(String[] args) {
-        /*System.out.println("                                                      ");
+        System.out.println("                                                      ");
         System.out.println("                                                      ");
         System.out.println("                                                      ");
         System.out.println(" _____________________________________________________");
@@ -15,14 +15,14 @@ public class alv {
         System.out.println("|_____________________________________________________|");
         System.out.println("                                                      ");
         System.out.println("                                                      ");
-        System.out.println("                                                      ");  */
+        System.out.println("                                                      "); 
       
       
       
       
       
       
-        System.out.println("                                                      ");
+     /*   System.out.println("                                                      ");
         System.out.println("                                                      ");
         System.out.println("                                                      ");
         System.out.println(" _____________________________________________________");
@@ -37,7 +37,7 @@ public class alv {
         System.out.println("|_____________________________________________________|");
         System.out.println("                                                      ");
         System.out.println("                                                      ");
-        System.out.println("                                                      "); 
+        System.out.println("                                                      ");   */
       
       
     }
