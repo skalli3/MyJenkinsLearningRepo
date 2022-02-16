@@ -56,7 +56,7 @@ pipeline {
         }*/
 
         steps {
-          //input(message: 'do you want to deploy to production?', ok: 'Yes')
+          input(message: 'do you want to deploy to production?', ok: 'Yes')
           sh "mvn exec:java -Dexec.mainClass=\"alv\""
         }
     }
